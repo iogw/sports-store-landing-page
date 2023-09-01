@@ -1,0 +1,17 @@
+.header {
+  &__btn {
+    width: 3.6rem;
+    padding: 1.1rem;
+    position: fixed;
+    background-color: $color-main;
+    &:hover {
+        background-color: $color-secondary;
+    }
+    &::before {
+      cursor:pointer;
+    }
+  }
+  &__ico-menu {
+
+  }
+}
