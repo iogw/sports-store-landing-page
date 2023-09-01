@@ -1,11 +1,20 @@
 // fonts
 $font-title: 'Roboto Slab', sans-serif;
 $font-text: 'Roboto', serif;
+$font-weight-text: 400;
+$font-weight-button: 500;
 
 // colors
-$color-main:#6c933e; /* moss green */
-$color-secondary: #d9e4cc; /* light-grey */
-$color-third: #4a4a4a; /* greyish-brown */
+
+// moss green
+$color-main:#6c933e;
+// light-grey
+$color-secondary: #d9e4cc;
+// greyish-brown
+$color-third: #4a4a4a;
+//  brownish-grey
 $color-fourth: #626262;
-$color-basic-main: #ffffff; /* white */
-$color-basic-secondary: #000000; /* black */
+// white
+$color-basic-main: #ffffff;
+// black
+$color-basic-secondary: #000000;
