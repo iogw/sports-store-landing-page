@@ -1,0 +1,12 @@
+@mixin ball($height, $width) {
+  height: $height;
+  width: $width;
+  border-radius: 50%;
+  background-color: $color-basic-main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    opacity: 0.8;
+  }
+}
