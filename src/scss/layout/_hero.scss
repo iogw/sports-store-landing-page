@@ -51,7 +51,22 @@
   }
   &__ball {
     @include ball(3.8rem, 3.8rem);
-
+    &:hover {
+      overflow: hidden;
+      .hero__arrow {
+        animation-duration: 1s;
+        animation-name: rolldown;
+        animation-iteration-count: infinite;
+        @keyframes rolldown {
+          from {
+            margin-top: -150%;
+          }
+          to {
+            margin-top: 200%;
+          }
+        }
+      }
+    }
     @media all and (min-width: 768px) {
       @include ball(4.5rem, 4.5rem);
     }
