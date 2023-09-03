@@ -1,21 +1,48 @@
 .about-us {
   background-color: $color-basic-main;
+  padding: 3.4rem 0 2.8rem;
+
+  @media all and (min-width: 768px) {
+    padding: 3.7rem 0 6.15rem;
+  }
+  @media all and (min-width: 1280px) {
+    padding: 3.9rem 0 5.9rem;
+  }
   &__pretitle {
-    padding-top: 3.4rem;
     @include font-text(1.4rem, $color-main);
     text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      @include font-text(1.6rem, $color-main);
+    }
   }
   &__title {
     padding: 1rem 0;
     @include font-title(2.2rem, $color-basic-secondary);
     text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      padding: 1.5rem 0;
+      @include font-title(3.2rem, $color-basic-secondary);
+    }
+    @media all and (min-width: 1280px) {
+      padding: 1.5rem 0 2.2rem;
+    }
   }
   &__text {
     @include font-text(1.8rem, $color-third);
     line-height: 3rem;
+    padding-right: 0.1rem;
+    @media all and (min-width: 768px) {
+      @include font-text(2rem, $color-third);
+    }
   }
   &__button {
     @include button(16rem, $color-basic-main, $color-main);
-    margin: 4.2rem 0 2.8rem;
+    margin-top: 4.2rem;
+    @media all and (min-width: 768px) {
+      margin-top: 2.1rem;
+    }
+    @media all and (min-width: 1280px) {
+      margin-top: 4.1rem;
+    }
   }
 }
