@@ -81,6 +81,22 @@
             transform: scaleX(100%);
           }
         }
+        @media all and (min-width: 1280px) {
+          @keyframes rotate {
+            from {
+              transform-origin: 15%;
+              transform: scaleX(100%);
+            }
+            50% {
+              transform-origin: 15%;
+              transform: scaleX(-100%);
+            }
+            to {
+              transform-origin: 15%;
+              transform: scaleX(100%);
+            }
+          }
+        }
       }
     }
     &-heart {
