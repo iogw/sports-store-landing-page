@@ -4,14 +4,9 @@
     padding: 1.1rem;
     position: fixed;
     background-color: $color-main;
+    z-index: 100;
     &:hover {
         background-color: $color-secondary;
     }
-    &::before {
-      cursor:pointer;
-    }
-  }
-  &__ico-menu {
-
   }
 }
