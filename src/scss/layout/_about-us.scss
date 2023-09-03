@@ -1,0 +1,42 @@
+.about-us {
+  background-color: $color-basic-main;
+  &__pretitle {
+    padding-top: 3.4rem;
+    font-size: 1.4rem;
+    font-family: $font-text;
+    font-weight: $font-weight-text;
+    color: $color-main;
+    text-transform: uppercase;
+  }
+  &__title {
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    font-family: $font-title;
+    font-weight: $font-weight-title;
+    color: $color-basic-secondary;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 1.8rem;
+    font-family: $font-text;
+    font-weight: $font-weight-text;
+    color: $color-third;
+    line-height: 3rem;
+  }
+  &__button {
+    display: block;
+    max-width: 16rem;
+    height: 4.5rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    border: 0.1rem solid $color-main;
+    margin: 4.2rem 0 2.8rem;
+
+    background-color: $color-basic-main;
+    font-family: $font-text;
+    font-weight: $font-weight-button;
+    color: $color-main;
+    text-decoration: none;
+    text-align: center;
+  }
+}
