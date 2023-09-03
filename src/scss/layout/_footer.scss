@@ -1,23 +1,23 @@
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media all and (min-width: 768px) {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
-  }
-  @media all and (min-width: 1280px) {
-    justify-content: space-between;
-  }
-}
 .footer {
   padding-bottom: 2.2rem;
   background-color: $color-third;
   line-height: 3rem;
+  & .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 768px) {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: start;
+    }
+    @media all and (min-width: 1280px) {
+      justify-content: space-around;
+    }
+  }
   &__ball {
     @include ball(4.5rem, 4.5rem);
     transform: translateY(-40%);
@@ -37,13 +37,6 @@
         text-align: left;
       }
     }
-    @media all and (min-width: 768px) {
-      padding-top: 4.5rem; /* compensate ball distance for mediaqueri -> position:absolute */
-      width: 10vw;
-    }
-    @media all and (min-width: 1280px) {
-      flex: 2;
-    }
   }
   &__link {
     @include font-text(1.6rem, $color-basic-main);
@@ -59,12 +52,16 @@
     }
     @media all and (min-width: 768px) {
       order: -1;
-      width: 10vw;
-      padding-top: 4.5rem; /* compensate ball distance for mediaqueri -> position:absolute */
+      text-align: left;
+    }
+  }
+  &__list,
+  &__small {
+    @media all and (min-width: 768px) {
+      padding-top: 4.5rem; /* compensate ball distance for 768px breakpoint -> position:absolute */
     }
     @media all and (min-width: 1280px) {
-      flex: 3;
-      text-align: left;
+      min-width: 20rem;
     }
   }
 }
