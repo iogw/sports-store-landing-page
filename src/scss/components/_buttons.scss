@@ -1,0 +1,19 @@
+@mixin font-button($FontSize, $FontColor) {
+  font-family: $font-text;
+  font-weight: $font-weight-button;
+  font-size: $FontSize;
+  color: $FontColor;
+}
+@mixin button($MaxWidth, $BgColor, $Color) {
+  display: block;
+  max-width: $MaxWidth;
+  height: 4.5rem;
+  border-radius: 5rem;
+  border: 0.2rem solid $color-main;
+  background-color: $BgColor;
+
+  @include font-button(2rem, $Color);
+  text-decoration: none;
+  text-align: center;
+  line-height: 4.1rem; /* same as height minus border*2 to center text */
+}

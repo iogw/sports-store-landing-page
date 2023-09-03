@@ -38,6 +38,24 @@
   &__button {
     @include button(16rem, $color-basic-main, $color-main);
     margin-top: 4.2rem;
+    transition: color 2s, background-color 2s, transform 1s;
+
+    &:hover {
+      max-width: 20rem;
+      color: $color-basic-main;
+      background-color: $color-main;
+      transform: scale(1.5) translate(25%, -5%);
+      &::before {
+        content: "¡";
+      }
+      &::after {
+        text-transform: uppercase;
+        content: " ahora!";
+      }
+      @media all and (min-width: 768px) {
+        transform: scale(1.5) translate(25%, 15%);
+      }
+    }
     @media all and (min-width: 768px) {
       margin-top: 2.1rem;
     }
