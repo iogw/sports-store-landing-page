@@ -1,37 +1,35 @@
 .footer {
+  padding-bottom: 2.2rem;
   background-color: $color-third;
-  color: $color-basic-main;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
 
-  font-family: $font-text;
-  font-weight: 400;
   line-height: 3rem;
 
   &__ball {
     @include ball(4.5rem, 4.5rem);
-    transform: translateY(-50%);
+    transform: translateY(-40%);
   }
   &__list {
-    padding: 1.4rem;
+    padding: 1.1rem;
     & * {
       list-style: none;
       text-align: center;
     }
   }
   &__link {
-    font-size: 1.6rem;
-    color: $color-basic-main;
+    @include font-text(1.6rem, $color-basic-main);
     text-decoration: none;
     text-transform: uppercase;
   }
   &__small {
     padding: 1rem;
+    @include font-text(1.4rem, $color-basic-main);
     &-heart {
       color: $color-main;
+      font-family: "zapfdingbats-2", serif;
     }
   }
 }
