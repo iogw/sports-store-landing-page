@@ -49,6 +49,23 @@
   &__button {
     @include button(18.4rem, $color-main, $color-basic-main);
     margin: 1rem auto;
+    transition: color 2s, background-color 2s, transform 1s;
+
+    &:hover {
+      // max-width: 20rem;
+      color: $color-main;
+      background-color: $color-basic-main;
+      transform: scale(1.2);
+      &::before {
+        content: "¡";
+      }
+      &::after {
+        content: "!";
+      }
+      @media all and (min-width: 768px) {
+        transform: scale(1.5);
+      }
+    }
     @media all and (min-width: 768px) {
       margin: 2rem auto;
     }
