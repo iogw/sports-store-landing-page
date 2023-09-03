@@ -9,7 +9,9 @@
   text-align: center;
   justify-content: flex-end;
   &__title {
-    max-width: 75%;
+    &::first-line {
+      white-space: 100vw;
+    }
     padding-bottom: 2rem;
     font-family: $font-title;
     font-weight: 700;
@@ -31,7 +33,7 @@
     width: 3.8rem;
     border-radius: 50%;
     background-color: $color-basic-main;
-    margin-bottom: 50px; /* px */
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
