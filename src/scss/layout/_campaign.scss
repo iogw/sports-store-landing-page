@@ -2,16 +2,27 @@
   background-color: $color-secondary;
   padding: 1.8rem 0 2.7rem;
   text-align: center;
+  @media all and (min-width: 768px) {
+    padding: 2.7rem 0 2.7rem;
+  }
   &__pretitle {
     @include font-title(1.2rem, $color-fourth);
   }
   &__title {
     @include font-title(2rem, $color-basic-secondary);
     text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      @include font-title(2.8rem, $color-basic-secondary);
+      padding-top: 1rem;
+    }
   }
   &__articles {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    @media all and (min-width: 768px) {
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__article {
     display: grid;
@@ -19,7 +30,9 @@
     padding-top: 1.5rem;
     justify-items: center;
     align-items: center;
-
+    @media all and (min-width: 768px) {
+      padding-top: 2.5rem;
+    }
     &-img {
       width: 11.4rem;
       height: 12.4rem;
@@ -28,10 +41,16 @@
     }
     &-title {
       @include font-title(1.4rem, $color-basic-secondary);
+      @media all and (min-width: 768px) {
+        @include font-title(1.8rem, $color-basic-secondary);
+      }
     }
   }
   &__button {
-    @include button(18.5rem, $color-main, $color-basic-main);
+    @include button(18.4rem, $color-main, $color-basic-main);
     margin: 1rem auto;
+    @media all and (min-width: 768px) {
+      margin: 2rem auto;
+    }
   }
 }
