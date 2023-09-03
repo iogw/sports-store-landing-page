@@ -1,0 +1,12 @@
+.header {
+  &__btn {
+    width: 3.6rem;
+    padding: 1.1rem;
+    position: fixed;
+    background-color: $color-main;
+    z-index: 100;
+    &:hover {
+        background-color: $color-secondary;
+    }
+  }
+}
