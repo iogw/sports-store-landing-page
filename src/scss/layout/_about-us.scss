@@ -1,42 +1,48 @@
 .about-us {
   background-color: $color-basic-main;
+  padding: 3.4rem 0 2.8rem;
+
+  @media all and (min-width: 768px) {
+    padding: 3.7rem 0 6.15rem;
+  }
+  @media all and (min-width: 1280px) {
+    padding: 3.9rem 0 5.9rem;
+  }
   &__pretitle {
-    padding-top: 3.4rem;
-    font-size: 1.4rem;
-    font-family: $font-text;
-    font-weight: $font-weight-text;
-    color: $color-main;
+    @include font-text(1.4rem, $color-main);
     text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      @include font-text(1.6rem, $color-main);
+    }
   }
   &__title {
     padding: 1rem 0;
-    font-size: 2.2rem;
-    font-family: $font-title;
-    font-weight: $font-weight-title;
-    color: $color-basic-secondary;
+    @include font-title(2.2rem, $color-basic-secondary);
     text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      padding: 1.5rem 0;
+      @include font-title(3.2rem, $color-basic-secondary);
+    }
+    @media all and (min-width: 1280px) {
+      padding: 1.5rem 0 2.2rem;
+    }
   }
   &__text {
-    font-size: 1.8rem;
-    font-family: $font-text;
-    font-weight: $font-weight-text;
-    color: $color-third;
+    @include font-text(1.8rem, $color-third);
     line-height: 3rem;
+    padding-right: 0.1rem;
+    @media all and (min-width: 768px) {
+      @include font-text(2rem, $color-third);
+    }
   }
   &__button {
-    display: block;
-    max-width: 16rem;
-    height: 4.5rem;
-    padding: 1rem;
-    border-radius: 5rem;
-    border: 0.1rem solid $color-main;
-    margin: 4.2rem 0 2.8rem;
-
-    background-color: $color-basic-main;
-    font-family: $font-text;
-    font-weight: $font-weight-button;
-    color: $color-main;
-    text-decoration: none;
-    text-align: center;
+    @include button(16rem, $color-basic-main, $color-main);
+    margin-top: 4.2rem;
+    @media all and (min-width: 768px) {
+      margin-top: 2.1rem;
+    }
+    @media all and (min-width: 1280px) {
+      margin-top: 4.1rem;
+    }
   }
 }
