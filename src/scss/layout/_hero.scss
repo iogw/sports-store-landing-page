@@ -3,42 +3,57 @@
   background-image: url(../images/cover.jpeg);
   background-size: cover;
   background-position-x: 83%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: flex-end;
+  padding-bottom: 5rem;
+
+  @media all and (min-width: 768px) {
+    background-position: 65%;
+    padding-bottom: 2.5rem;
+  }
+  @media all and (min-width: 1280px) {
+    background-size: 135%;
+    background-position: 58% 67%;
+    padding-bottom: 5.4rem;
+  }
+  & .page-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+  }
   &__title {
-    &::first-line {
-      white-space: 100vw;
-    }
     padding-bottom: 2rem;
-    font-family: $font-title;
-    font-weight: 700;
-    font-size: 3rem;
+    @include font-title(3rem, $color-basic-main);
     text-transform: uppercase;
-    color: $color-basic-main;
-    line-height: 4.5rem;
+    line-height: 150%;
+    &::first-line {
+      word-spacing: 100vw;
+    }
+    @media all and (min-width: 768px) {
+      padding-bottom: 0;
+      @include font-title(7.5rem, $color-basic-main);
+    }
   }
   &__text {
-    max-width: 75%;
+    max-width: 25rem;
     padding-bottom: 2rem;
-    font-family: $font-text;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: $color-basic-main;
+    @include font-text(1.6rem, $color-basic-main);
+
+    @media all and (min-width: 768px) {
+      max-width: 34rem;
+      @include font-text(2.4rem, $color-basic-main);
+    }
+    @media all and (min-width: 1280px) {
+      max-width: 100%;
+      padding-bottom: 4rem;
+    }
   }
   &__ball {
-    height: 3.8rem;
-    width: 3.8rem;
-    border-radius: 50%;
-    background-color: $color-basic-main;
-    margin-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-      opacity: 0.8;
+    @include ball(3.8rem, 3.8rem);
+
+    @media all and (min-width: 768px) {
+      @include ball(4.5rem, 4.5rem);
     }
   }
   &__arrow {
