@@ -1,22 +1,48 @@
-.footer {
-  padding-bottom: 2.2rem;
-  background-color: $color-third;
+.page-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  @media all and (min-width: 768px) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+  @media all and (min-width: 1280px) {
+    justify-content: space-between;
+  }
+}
+.footer {
+  padding-bottom: 2.2rem;
+  background-color: $color-third;
   line-height: 3rem;
-
   &__ball {
     @include ball(4.5rem, 4.5rem);
     transform: translateY(-40%);
+    @media all and (min-width: 768px) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-40%);
+    }
   }
   &__list {
     padding: 1.1rem;
     & * {
       list-style: none;
       text-align: center;
+      @media all and (min-width: 768px) {
+        text-align: left;
+      }
+    }
+    @media all and (min-width: 768px) {
+      padding-top: 4.5rem; /* compensate ball distance for mediaqueri -> position:absolute */
+      width: 10vw;
+    }
+    @media all and (min-width: 1280px) {
+      flex: 2;
     }
   }
   &__link {
@@ -30,6 +56,15 @@
     &-heart {
       color: $color-main;
       font-family: "zapfdingbats-2", serif;
+    }
+    @media all and (min-width: 768px) {
+      order: -1;
+      width: 10vw;
+      padding-top: 4.5rem; /* compensate ball distance for mediaqueri -> position:absolute */
+    }
+    @media all and (min-width: 1280px) {
+      flex: 3;
+      text-align: left;
     }
   }
 }
