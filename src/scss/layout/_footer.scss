@@ -58,10 +58,31 @@
     @include font-text(1.6rem, $color-basic-main);
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &__small {
     padding: 1rem;
     @include font-text(1.4rem, $color-basic-main);
+    &--rotate {
+      &:hover {
+        animation-duration: 3s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+        @keyframes rotate {
+          from {
+            transform: scaleX(100%);
+          }
+          50% {
+            transform: scaleX(-100%);
+          }
+          to {
+            transform: scaleX(100%);
+          }
+        }
+      }
+    }
     &-heart {
       color: $color-main;
       font-family: "zapfdingbats-2", serif;
