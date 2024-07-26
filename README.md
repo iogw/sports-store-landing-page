@@ -57,16 +57,12 @@ Con este reto asenté las bases y aprendí a usar mixins en HTML y SCSS.
 ## DIY
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/)
 
-1. Instalar los módulos
-> npm i
-2. Iniciar proyecto
-> npm run dev
+1. Instalar los módulos: `npm i`
+2. Iniciar proyecto: `npm run dev`
 
-Para cualquier modificación en directo, editar los archivos en `src`. Para añadir imágenes: en `public/images`.
+Para cualquier modificación en directo, editar los archivos en `src`. Para añadir imágenes: `public/images`.
 
 > **CTRL+C** para finalizar el proyecto
-3. Montar el despliegue
-> npm run docs
+3. Montar el despliegue: `npm run docs`
 
-4. Montar y subir el despliegue
-> npm run deploy
+4. Montar y subir el despliegue: `npm run deploy`
