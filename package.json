@@ -6,8 +6,7 @@
   "description": "",
   "scripts": {
     "start": "rm -rf dist/ && gulp",
-    "docs": "rm -rf docs/ && mv dist/ docs/",
-    "deploy": "npm run docs && git add docs/ && git commit -m \"Deploy\" && git push"
+    "deploy": "rm -rf docs/ && mv dist/ docs/ && git add docs/ && git commit -m \"Deploy\" && git push"
   },
   "devDependencies": {
     "browser-sync": "^3.0.2",
