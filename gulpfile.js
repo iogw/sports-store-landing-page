@@ -2,9 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
-// const htmlminifier = require('html-minifier').minify;
-// const htmlInclude = require('gulp-html-tag-include');
-
 const browserSync = require('browser-sync').create();
 
 // Tarea para compilar Sass a CSS
@@ -27,6 +24,13 @@ gulp.task('html', function () {
     .pipe(browserSync.stream());
 });
 
+// Tarea para copiar imágenes
+gulp.task('images', function () {
+  return gulp
+    .src('./src/images/**/*') // Busca todos los archivos en src/images y subcarpetas
+    .pipe(gulp.dest('./dist/assets/images')); // Copia a docs/images manteniendo la estructura
+});
+
 // Tarea para servir con BrowserSync y observar cambios
 gulp.task('serve', function () {
   browserSync.init({
@@ -40,4 +44,8 @@ gulp.task('serve', function () {
 });
 
 // Tarea por defecto que ejecuta 'sass', 'html' y 'serve'
-gulp.task('default', gulp.series(gulp.parallel('sass', 'html'), 'serve'));
+
+gulp.task(
+  'default',
+  gulp.series(gulp.parallel('sass', 'html', 'images'), 'serve')
+);
