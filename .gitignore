@@ -190,5 +190,4 @@ dist
 # This project
 .vscode
 package-lock.json
-dist/
 00-old-project
