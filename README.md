@@ -23,7 +23,7 @@ En primer lugar se debe realizar la maquetación sobre un diseño dado:
 ### Interacción:
 1. El botón del hero enlaza a **Vuelta al cole**.
 2. El botón del footer enlaza al **hero**.
-3. Todos los enlaces de footer enlazan a https://adalab.es
+3. Todos los enlaces de footer enlazan a la web de Adalab.
 4. **BONUS**: Investigar propiedades de *transform* y *transition* usando :hover.
 5. **BONUS**: Investigar propiedad de *animation*
 
